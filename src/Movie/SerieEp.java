@@ -9,11 +9,14 @@ package Movie;
  *
  * @author INT105
  */
-public class SeriesEp {
+public class SerieEp {
     private String title;
-    private int length;
+    private Integer length;
 
-    public SeriesEp(String title, int length) {
+    public SerieEp() {
+    }
+
+    public SerieEp(String title, Integer length) {
         this.title = title;
         this.length = length;
     }
@@ -26,17 +29,19 @@ public class SeriesEp {
         this.title = title;
     }
 
-    public int getLength() {
+    public Integer getLength() {
         return length;
     }
 
-    public void setLength(int length) {
+    public void setLength(Integer length) {
         this.length = length;
     }
 
     @Override
     public String toString() {
-        return "SeriesEp{" + "title=" + title + ", length=" + length + '}';
+        return "SerieEp{" +
+                "title='" + title + '\'' +
+                ", length=" + length +
+                '}';
     }
-    
 }

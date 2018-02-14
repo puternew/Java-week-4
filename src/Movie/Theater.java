@@ -9,8 +9,8 @@ package Movie;
  *
  * @author INT105
  */
-public class Theater {
 
+public class Theater {
     private String name;
 
     public Theater() {
@@ -30,7 +30,23 @@ public class Theater {
 
     @Override
     public String toString() {
-        return "Theater{" + "name=" + name + '}';
+        return "Theater{" +
+                "name='" + name + '\'' +
+                '}';
     }
-
+    
+    
+    @Override
+    public boolean equals(Object obj) {
+        Theater temp;
+        if (obj!=null && obj instanceof Theater) {
+            temp = (Theater)obj;
+            if (this.getName() == temp.getName()) 
+                return true;    
+        }
+        return false; 
+    }
 }
+
+
+

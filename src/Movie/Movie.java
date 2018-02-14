@@ -10,20 +10,19 @@ package Movie;
  * @author INT105
  */
 public class Movie {
-
     private String name;
     private String genre;
-    private int season;
-    private int lenght;
+    private Integer season;
+    private Integer length;
 
     public Movie() {
     }
 
-    public Movie(String name, String genre, int season, int lenght) {
+    public Movie(String name, String genre, Integer season, Integer length) {
         this.name = name;
         this.genre = genre;
         this.season = season;
-        this.lenght = lenght;
+        this.length = length;
     }
 
     public String getName() {
@@ -42,25 +41,29 @@ public class Movie {
         this.genre = genre;
     }
 
-    public int getSeason() {
+    public Integer getSeason() {
         return season;
     }
 
-    public void setSeason(int season) {
+    public void setSeason(Integer season) {
         this.season = season;
     }
 
-    public int getLenght() {
-        return lenght;
+    public Integer getLength() {
+        return length;
     }
 
-    public void setLenght(int lenght) {
-        this.lenght = lenght;
+    public void setLength(Integer length) {
+        this.length = length;
     }
 
     @Override
     public String toString() {
-        return "Movie{" + "name=" + name + ", genre=" + genre + ", season=" + season + ", lenght=" + lenght + '}';
+        return "Movie{" +
+                "name='" + name + '\'' +
+                ", genre='" + genre + '\'' +
+                ", season=" + season +
+                ", length=" + length +
+                '}';
     }
-
 }
